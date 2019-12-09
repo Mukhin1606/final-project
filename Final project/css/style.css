@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url(../fonts/montserrat/montserrat-light-webfont.woff2) format('woff2'),
+        url(../fonts/montserrat/montserrat-light-webfont.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-medium-webfont.woff2) format('woff2'),
+        url(../fonts/raleway/raleway-medium-webfont.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-regular-webfont.woff2) format('woff2'),
+        url(../fonts/raleway/raleway-regular-webfont.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-extrabold-webfont.woff2) format('woff2'),
+        url(../fonts/raleway/raleway-extrabold-webfont.woff) format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-semibold-webfont.woff2) format('woff2'),
+        url(../fonts/raleway/raleway-semibold-webfont.woff) format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.main-header {
+    width: 100%;
+    min-height: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/main-header-bg.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 40px 0 40px 0;
+}
+
+.main-header-menu-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-right: 220px;
+}
+
+.logo:hover .logo-icon {
+    fill: #998675;
+}
+
+.logo:hover .logo-txt {
+    color: #998675;
+}
+
+.logo:active .logo-icon {
+    fill: white;
+}
+
+.logo:active .logo-txt {
+    color: white;
+}
+
+.logo-icon {
+    fill: white;
+}
+
+.logo-txt {
+    font-size: 34px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    font-weight: 300;
+    margin-right: 30px;
+}
+
+.menu-link:last-child {
+    margin-right: 63px;
+}
+
+.menu-link:hover {
+    color: #c7b299;
+}
+
+.menu-link:active {
+    color: white;
+}
+
+.cart {
+    display: block;
+    margin-right: 30px;
+}
+
+.search {
+    display: block;
+}
+
+.header-slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    fill: #d3c1ad;
+}
+
+.header-slider-center {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    flex-wrap: wrap;
+}
+
+.header-slider-design {
+    font-size: 36px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header-slider-portfolio {
+    font-size: 52px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.header-slider-txt {
+    width: 570px;
+    font-size: 16px;
+    font-family: "montserrat";
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: center;
+    word-break: break-all;
+    margin-top: 10px;
+}
+
+.header-slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 55px;
+    background-color: #998675;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.643;
+    margin-top: 55px;
+}
+
+.header-slider-btn:hover {
+    border: 2px solid #998675;
+    background-color: transparent;
+}
+
+.header-slider-btn:active {
+    background-color: #998675;
+    border: 2px solid transparent;
+}
+
+.right {
+    fill: #d3c1ad;
+}
+
+.header-pagination {
+    width: 120px;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: #8f8f91;
+}
+
+.header-circle:hover {
+    background-color: transparent;
+    border: 2px solid #d3c1ad;
+}
+
+/* ///HEADER */
+
+/* SECTION SERVICES */
+
+.services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 80px 0 80px 0;
+}
+
+.services-link {
+    width: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.services-link:last-child {
+    margin-right: 0;
+}
+
+.services-link:hover svg {
+    fill: #c7b299;
+}
+
+.services-link:hover span {
+    color: #c7b299;
+}
+
+.services-link:hover:after {
+    background-color: #c7b299;
+}
+
+.services-item-pic {
+    fill: #555555;
+}
+
+.service-item-title {
+    font-size: 22px;
+    font-family: "raleway";
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    line-height: 1.2;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.service-item-txt {
+    font-size: 14px;
+    font-family: "montserrat";
+    color: rgb(140, 140, 140);
+    font-weight: 300;
+    line-height: 1.714;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.services-link:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #f1eee9;
+    margin-top: 20px;
+}
+
+/* ///SECTION SERVICES */
+
+/*SECTION SCREENSHOTS */
+
+.screenshots {
+    width: 100%;
+    min-height: 700px;
+    box-sizing: border-box;
+    padding-top: 80px;
+    background-color: #fbfaf8;
+    position: relative;
+}
+
+.screenshots-description {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.screenshots-title {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: "raleway";
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.screenshots-txt {
+    width: 720px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: 300;
+    color: rgb(140, 140, 140);
+    line-height: 1.75;
+    margin-top: 20px;
+}
+
+.screenshots-picture {
+    display: block;
+}
+
+.screenshots-picture-left {
+    position: absolute;
+    top: 300px;
+    left: 350px;
+    z-index: 1;
+}
+
+.screenshots-picture-left:hover {
+    z-index: 4;
+}
+
+.screenshots-picture-right {
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    z-index: 2;
+}
+
+.screenshots-picture-right:hover {
+    z-index: 4;
+}
+
+.screenshots-picture-center {
+    position: absolute;
+    top: 218px;
+    left: 580px;
+    z-index: 3;
+}
+
+/* ///SECTION SCREENSHOTS */
+
+/* SECTION PURCHASE */
+
+.purchase {
+    width: 100%;
+    background-image: -moz-linear-gradient(0deg, rgb(33, 27, 25) 0%, rgb(78, 52, 39) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(33, 27, 25) 0%, rgb(78, 52, 39) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(33, 27, 25) 0%, rgb(78, 52, 39) 100%);
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchase-text-title {
+    font-size: 28px;
+    font-family: "raleway";
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.first-word {
+    color: #c7b299;
+}
+
+.purchase-text-p {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: rgb(97, 88, 85);
+    line-height: 1.2;
+    text-align: left;
+    margin: 10px 470px 0 0;
+}
+
+.purchase-btn {
+    width: 170px;
+    min-height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #998675;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.643;
+    text-align: center;
+}
+
+.purchase-btn:hover {
+    border: 2px solid #998675;
+    background-color: transparent;
+}
+
+.purchase-btn:active {
+    border: 2px solid transparent;
+    background-color: #998675;
+}
+
+/* ///SECTION PURCHASE */
