@@ -1,42 +1,43 @@
 @font-face {
     font-family: 'montserrat';
-    src: url(../fonts/montserrat/montserrat-light-webfont.woff2) format('woff2'),
-        url(../fonts/montserrat/montserrat-light-webfont.woff) format('woff');
+    src: url(../fonts/montserrat/montserrat-light-webfont.woff2) format('woff2'), url(../fonts/montserrat/montserrat-light-webfont.woff) format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'raleway';
-    src: url(../fonts/raleway/raleway-medium-webfont.woff2) format('woff2'),
-        url(../fonts/raleway/raleway-medium-webfont.woff) format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'raleway';
-    src: url(../fonts/raleway/raleway-regular-webfont.woff2) format('woff2'),
-        url(../fonts/raleway/raleway-regular-webfont.woff) format('woff');
+    font-family: 'montserrat';
+    src: url(../fonts/montserrat/montserrat-regular-webfont.woff2) format('woff2'), url(../fonts/montserrat/montserrat-regular-webfont.woff) format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'raleway';
-    src: url(../fonts/raleway/raleway-extrabold-webfont.woff2) format('woff2'),
-        url(../fonts/raleway/raleway-extrabold-webfont.woff) format('woff');
+    src: url(../fonts/raleway/raleway-medium-webfont.woff2) format('woff2'), url(../fonts/raleway/raleway-medium-webfont.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-regular-webfont.woff2) format('woff2'), url(../fonts/raleway/raleway-regular-webfont.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway/raleway-extrabold-webfont.woff2) format('woff2'), url(../fonts/raleway/raleway-extrabold-webfont.woff) format('woff');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'raleway';
-    src: url(../fonts/raleway/raleway-semibold-webfont.woff2) format('woff2'),
-        url(../fonts/raleway/raleway-semibold-webfont.woff) format('woff');
+    src: url(../fonts/raleway/raleway-semibold-webfont.woff2) format('woff2'), url(../fonts/raleway/raleway-semibold-webfont.woff) format('woff');
     font-weight: 600;
     font-style: normal;
-
 }
 
 * {
@@ -47,6 +48,7 @@
     width: 1920px;
     margin: 0 auto;
 }
+
 
 /* HEADER */
 
@@ -118,6 +120,7 @@
     line-height: 1.2;
     font-weight: 300;
     margin-right: 30px;
+    transition: color .4s linear;
 }
 
 .menu-link:last-child {
@@ -135,10 +138,43 @@
 .cart {
     display: block;
     margin-right: 30px;
+    background-image: url(../img/icon-cart.png);
+    width: 18px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
 }
 
-.search {
-    display: block;
+.src {
+    width: 25px;
+    height: 25px;
+}
+
+input[type="search"] {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    text-transform: capitalize;
+    outline: none;
+    background-color: transparent;
+    background-image: url(../img/icon-search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 300;
+}
+
+input[type="search"]:focus {
+    width: 250px;
+    transition: width 1s ease-out;
+    background-image: url("");
+    border: 1px solid gray;
 }
 
 .header-slider {
@@ -148,6 +184,14 @@
 }
 
 .left {
+    fill: #d3c1ad;
+}
+
+.left:hover {
+    fill: white;
+}
+
+.left:active {
     fill: #d3c1ad;
 }
 
@@ -175,7 +219,6 @@
     line-height: 1.2;
     text-align: center;
     margin-top: 10px;
-
 }
 
 .header-slider-txt {
@@ -207,6 +250,7 @@
     text-transform: uppercase;
     line-height: 1.643;
     margin-top: 55px;
+    transition: background-color .4s linear;
 }
 
 .header-slider-btn:hover {
@@ -220,6 +264,14 @@
 }
 
 .right {
+    fill: #d3c1ad;
+}
+
+.right:hover {
+    fill: white;
+}
+
+.right:active {
     fill: #d3c1ad;
 }
 
@@ -241,11 +293,14 @@
 }
 
 .header-circle:hover {
+    transform: scale(1.4);
     background-color: transparent;
     border: 2px solid #d3c1ad;
 }
 
+
 /* ///HEADER */
+
 
 /* SECTION SERVICES */
 
@@ -316,7 +371,9 @@
     margin-top: 20px;
 }
 
+
 /* ///SECTION SERVICES */
+
 
 /*SECTION SCREENSHOTS */
 
@@ -333,7 +390,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .screenshots-title {
@@ -390,7 +446,9 @@
     z-index: 3;
 }
 
+
 /* ///SECTION SCREENSHOTS */
+
 
 /* SECTION PURCHASE */
 
@@ -400,6 +458,7 @@
     background-image: -webkit-linear-gradient(0deg, rgb(33, 27, 25) 0%, rgb(78, 52, 39) 100%);
     background-image: -ms-linear-gradient(0deg, rgb(33, 27, 25) 0%, rgb(78, 52, 39) 100%);
     padding: 50px 0 50px 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,6 +504,7 @@
     text-transform: uppercase;
     line-height: 1.643;
     text-align: center;
+    transition: background-color .4s linear;
 }
 
 .purchase-btn:hover {
@@ -457,4 +517,275 @@
     background-color: #998675;
 }
 
+
 /* ///SECTION PURCHASE */
+
+
+/* SECTION PROJECTS */
+
+.project {
+    width: 100%;
+    background-color: #fff;
+    padding: 80px 380px 80px 380px;
+    box-sizing: border-box;
+}
+
+.project-text-wrp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.project-title {
+    width: 100%;
+    font-size: 30px;
+    font-family: "raleway";
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.project-txt {
+    width: 722px;
+    font-size: 16px;
+    font-family: "montserrat";
+    color: rgb(140, 140, 140);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-top: 22px;
+}
+
+.project-button-wrp {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.project-btn {
+    padding: 8px 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: "montserrat";
+    font-weight: 300;
+    color: rgb(140, 140, 140);
+    line-height: 1.5;
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    transition: background-color .4s linear, color .4s linear, border .4s linear;
+    cursor: pointer;
+}
+
+.project-btn:hover {
+    background-color: #998675;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.project-picture-wrp {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-article {
+    width: 370px;
+    position: relative;
+    margin-top: 35px;
+}
+
+.project-article:hover .article-btn-link {
+    display: block;
+}
+
+.project-article:hover .article-btn-search {
+    display: block;
+}
+
+.project-article:hover .project-article-photo {
+    filter: brightness(40%);
+    transition: filter 0.4s linear;
+}
+
+.project-article:hover .project-article-txt-wrp {
+    background-color: #362f2d;
+    transition: background-color 0.4s linear;
+}
+
+.project-article:hover .project-article-txt-wrp:before {
+    border-bottom: 10px solid #362f2d;
+    transition: border-bottom 0.4s linear;
+}
+
+.project-article:hover .project-article-txt-wrp .article-title {
+    color: #ffffff;
+}
+
+.project-article:hover .project-article-txt-wrp .article-txt {
+    color: #c7b299;
+}
+
+.project-article-photo {
+    width: 100%;
+    display: block;
+}
+
+.project-article-txt-wrp {
+    width: 100%;
+    position: relative;
+    background-color: #fbfaf8;
+    padding: 25px 110px 25px 30px;
+    box-sizing: border-box;
+}
+
+.project-article-txt-wrp:before {
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    position: absolute;
+    top: -20px;
+    left: 19px;
+}
+
+.article-title {
+    display: block;
+    font-size: 20px;
+    font-family: "raleway";
+    font-weight: 500;
+    color: rgb(199, 178, 153);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.article-txt {
+    display: block;
+    font-size: 14px;
+    font-family: "montserrat";
+    font-weight: 300;
+    color: rgb(209, 209, 209);
+    line-height: 1.429;
+    text-align: left;
+    margin-top: 11px;
+}
+
+.article-btn-link,
+.article-btn-search {
+    width: 26px;
+    height: 26px;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+}
+
+.article-btn-link {
+    background-image: url(../img/link.png);
+    left: 35%;
+}
+
+.article-btn-search {
+    background-image: url(../img/lupa.png);
+    right: 35%;
+}
+
+.load {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-btn {
+    padding: 12px 43px;
+    font-size: 14px;
+    font-family: "raleway";
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.643;
+    background-color: #998675;
+    outline: none;
+    margin: auto;
+}
+
+
+/* ///SECTION PROJECTS */
+
+
+/* SECTION VIDEO */
+
+.video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 708px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-item {
+    width: 100%;
+    height: 708px;
+}
+
+.video-txt-wrp {
+    width: 560px;
+    box-sizing: border-box;
+    position: absolute;
+    padding-top: 210px;
+}
+
+.video-txt-btn {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    outline: none;
+    background-image: url(../img/icon-play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    border: none;
+    margin: 0 auto;
+}
+
+.video-txt-title {
+    display: block;
+    font-size: 30px;
+    font-family: "raleway";
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.video-txt-p {
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    line-height: 1.75;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.video-txt-time {
+    display: block;
+    font-size: 14px;
+    font-family: "montserrat";
+    font-weight: 400;
+    color: rgb(199, 178, 153);
+    line-height: 1.714;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ///SECTION VIDEO */
